@@ -1,35 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Timer</title>
-  </head>
-  <body style="background-color: black">
-    <h1 id="timer" style="color: white; font-size: 150px; text-align: center">
-      Please Wait ...
-    </h1>
-    <h1 id="dater" style="color: white; font-size: 70px; text-align: center">
-      Please Wait ...
-    </h1>
-    <p style="font-size: 120px; text-align: center;">&#8986;</p>
 
-    <script>
-      var date = setInterval(myTimer(), 1000);
-      myDater();
-      function myTimer() {
-        var date = new Date();
-        var t = date.toLocaleTimeString();
-        document.getElementById("timer").innerHTML = t;
-      }
-      function myDater() {
-        var date = new Date();
-        var month = date.getMonth();
-        var day = date.getDay();
-        var year = date.getFullYear();
-        document.getElementById("dater").innerHTML =
-          day + "/" + month + "/" + year;
-      }
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timer</title>
+</head>
+
+<body style="background-color: black">
+  <h1 id="timer" style="color: white;font-size: 10vw;margin:0px; font: Verdana;text-align: center;">Please Wait ...</h1>
+  <h1 id="dater" style="color: white; font-size: 6vw;margin:0px; text-align: center">Loading ...</h1>
+  <p style="font-size: 120px; text-align: center; margin:0px;">&#8986;</p>
+
+  <script>
+    var date = setInterval(myTimer, 1000);
+    myDater();
+    function myTimer() {
+      var date = new Date();
+      var t = date.toLocaleTimeString();
+      document.getElementById("timer").innerHTML = t;
+    }
+    function myDater() {
+      var date = new Date();
+      var month = date.getMonth() + 1;
+      var day = date.getDay();
+      var year = date.getFullYear();
+      document.getElementById("dater").innerHTML =
+        day + "/" + month + "/" + year;
+    }
+  </script>
+</body>
 </html>
