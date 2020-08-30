@@ -1,4 +1,5 @@
 # Time-ScreenSaver
 Website for time and date to use as Screen Saver
+Visit to checkout -> https://ankit-khachane.github.io/timescreensaver/
 
-Note: under development.
+Note: Under Development.
