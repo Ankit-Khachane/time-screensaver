@@ -22,13 +22,55 @@
     </h1>
     <h1
       id="dater"
-      style="color: white; font-size: 6vw; margin: auto; text-align: center; padding-top: 10px;"
+      style="
+        color: white;
+        font-size: 6vw;
+        margin: auto;
+        text-align: center;
+        padding-top: 10px;
+      "
     >
       Loading ...
+    </h1>
+    <h1
+      id="day"
+      style="
+        color: white;
+        font-size: 6vw;
+        margin: auto;
+        text-align: center;
+        padding-top: 10px;
+      "
+    >
+      Day ...
     </h1>
     <p style="font-size: 120px; text-align: center; margin: auto">&#8986;</p>
 
     <script>
+      var months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+      var days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+
       var date = setInterval(myTimer, 1000);
       myDater();
       function myTimer() {
@@ -38,11 +80,13 @@
       }
       function myDater() {
         var date = new Date();
-        var month = date.getMonth() + 1;
-        var day = date.getDay();
+        var month = months[date.getMonth()];
+        var date_val = date.getDay();
         var year = date.getFullYear();
+        var day = days[date.getDay()];
         document.getElementById("dater").innerHTML =
-          day + "/" + month + "/" + year;
+          date_val + " " + month + " " + year;
+        document.getElementById("day").innerHTML = day;
       }
     </script>
   </body>
