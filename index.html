@@ -24,7 +24,7 @@
       id="dater"
       style="
         color: white;
-        font-size: 6vw;
+        font-size: 5vw;
         margin: auto;
         text-align: center;
         padding-top: 10px;
@@ -36,7 +36,7 @@
       id="day"
       style="
         color: white;
-        font-size: 6vw;
+        font-size: 3vw;
         margin: auto;
         text-align: center;
         padding-top: 10px;
@@ -75,8 +75,8 @@
       myDater();
       function myTimer() {
         var date = new Date();
-        var t = date.toLocaleTimeString();
-        document.getElementById("timer").innerHTML = t;
+        var timestamp = date.toLocaleTimeString();
+        document.getElementById("timer").innerHTML = timestamp;
       }
       function myDater() {
         var date = new Date();
